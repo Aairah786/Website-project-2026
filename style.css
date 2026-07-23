@@ -1,665 +1,334 @@
-/* GENERAL STYLES FOR THE WHOLE PAGE */ 
-
-body {  
-
-    margin: 0;  
-
-    padding: 0;  
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-
-    background-color: #e2e8f0; /* Soft silver grey background canvas */ 
-
-    color: #000000;             
-
-} 
-
- 
-
-h1 { 
-
-    color: #000000; 
-
-} 
-
- 
-
-h2 { 
-
-    color: #4C7A4F;            /* Section titles use your Kawakawa Green */ 
-
-    font-size: 1.9rem; 
-
-    margin: 15px; 
-
-    font-weight: 700; 
-
-} 
-
- 
-
-p { 
-
-    font-size: 1.1rem; 
-
-    line-height: 1.7;  
-
-    margin: 15px; 
-
-    color: #2d3748;            /* Dark charcoal text for comfortable reading */ 
-
-} 
-
- 
-
-/* TOP BAR MENU AND BUTTON STYLES */ 
-
-.header-container { 
-
-    display: flex; 
-
-    justify-content: space-between;  
-
-    align-items: center; 
-
-    background-color: #000000;      /* Pure black navigation header bar */ 
-
-    padding: 5px 40px; 
-
-    border-bottom: 3px solid #C4A55A; /* Gold ribbon indicator under the navbar */ 
-
-} 
-
- 
-
-.site-title { 
-
-    font-size: 1.4rem; 
-
-    font-weight: bold; 
-
-    color: #ffffff; 
-
-} 
-
- 
-
-.navbar { 
-
-    list-style-type: none;  
-
-    margin: 0;  
-
-    padding: 10px 0;  
-
-    display: flex;          
-
-    gap: 8px;               
-
-} 
-
- 
-
-.navbar li a {  
-
-    display: block;  
-
-    color: #cbd5e1;  
-
-    text-align: center;  
-
-    padding: 10px 20px;  
-
-    text-decoration: none;  
-
-    font-weight: 600; 
-
-    transition: all 0.2s ease;  
-
-} 
-
- 
-
-/* This triggers when the user hovers their mouse cursor over a menu item */ 
-
-.navbar li a:hover {  
-
-    color: #C4A55A; /* Menu links slide into Gold on hover */ 
-
-} 
-
- 
-
-/* This colors the button for whatever page the user is currently looking at */ 
-
-.navbar li a.active { 
-
-    color: #ffffff; 
-
-    background-color: #4C7A4F; /* Current page tag matches your Green hex */ 
-
-    border-radius: 8px; 
-
-} 
-
- 
-
-/* TWO COLUMN CONTENT ROW STYLES (TEXT + IMAGE SIDE-BY-SIDE) */ 
-
-.container { 
-
-    max-width: 1100px;  
-
-    margin: 0 auto;     
-
-    padding: 20px; 
-
-    margin-top: 40px; 
-
-} 
-
- 
-
-.content-row { 
-
-    display: grid; 
-
-    grid-template-columns: 1.2fr 0.8fr;  
-
-    gap: 60px; 
-
-    align-items: center; 
-
-    margin-bottom: 60px; 
-
-    background-color: #fbf9f4; /* CHANGED: Clean cream beige inside content boxes */ 
-
-    padding: 30px; 
-
-    border-radius: 20px; 
-
-    border: 1px solid #cbd5e1; 
-
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
-
-} 
-
- 
-
-.text-block { 
-
-    display: flex; 
-
-    flex-direction: column; 
-
-    justify-content: center; 
-
-} 
-
- 
-
-.image-block { 
-
-    width: 100%; 
-
-    display: flex; 
-
-    justify-content: center; 
-
-    overflow: hidden;  
-
-    border-radius: 20px; 
-
-    border: 1px solid #cbd5e1; 
-
-} 
-
- 
-
-.image-block img { 
-
-    width: 100%; 
-
-    max-width: 350px; 
-
-    height: 240px;        
-
-    object-fit: cover;    
-
-    border-radius: 20px;  
-
-    transition: transform 0.4s ease;  
-
-} 
-
- 
-
-.image-block:hover img { 
-
-    transform: scale(1.05);  
-
-} 
-
- 
-
-.hero-title { 
-
-    font-size: 3rem; 
-
-    font-weight: 800; 
-
-    margin: 15px 15px 5px 15px; 
-
-    line-height: 1.1; 
-
-} 
-
- 
-
-.hero-subtitle { 
-
-    color: #4a5568; 
-
-    font-size: 1.3rem; 
-
-    font-weight: normal; 
-
-    line-height: 1.6; 
-
-    margin: 5px 15px 15px 15px; 
-
-} 
-
- 
-
-/* SCHOOLING PATHWAY TIMELINE AND GRID STYLES */ 
-
-.badge { 
-
-    display: inline-block; 
-
-    background-color: rgba(76, 122, 79, 0.1); /* Subtle green tint glow capsule */ 
-
-    color: #4C7A4F;                           /* Green badge typography text */ 
-
-    padding: 6px 14px; 
-
-    border-radius: 100px; 
-
-    font-size: 0.85rem; 
-
-    font-weight: 600; 
-
-    margin-bottom: 10px; 
-
-    border: 1px solid rgba(76, 122, 79, 0.2); 
-
-    margin-left: 15px; 
-
-} 
-
- 
-
-.section-divider-title { 
-
-    font-size: 2rem; 
-
-    color: #000000; 
-
-    font-weight: bold; 
-
-    margin: 60px 15px 25px 15px; 
-
-} 
-
- 
-
-.timeline-container { 
-
-    display: grid; 
-
-    grid-template-columns: repeat(3, 1fr); 
-
-    gap: 25px; 
-
-    margin: 15px; 
-
-} 
-
- 
-
-.timeline-card { 
-
-    background-color: #fbf9f4; /* CHANGED: Clean cream beige background for timeline cards */ 
-
-    padding: 25px; 
-
-    border-radius: 20px; 
-
-    border: 1px solid #cbd5e1; 
-
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
-
-    transition: all 0.3s ease; 
-
-} 
-
- 
-
-.timeline-card:hover { 
-
-    transform: translateY(-5px);  
-
-    border-color: #4C7A4F; /* Cards light up green on mouse focus hover */ 
-
-} 
-
- 
-
-.card-header { 
-
-    display: flex; 
-
-    flex-direction: column; 
-
-    gap: 8px; 
-
-    margin-bottom: 15px; 
-
-} 
-
- 
-
-.step-number { 
-
-    align-self: flex-start; 
-
-    background-color: #4C7A4F; /* Year tag boxes filled with Kawakawa Green */ 
-
-    color: #ffffff; 
-
-    font-weight: bold; 
-
-    font-size: 0.85rem; 
-
-    padding: 4px 10px; 
-
-    border-radius: 6px; 
-
-} 
-
- 
-
-.step-title { 
-
-    color: #000000; 
-
-    font-size: 1.4rem; 
-
-    font-weight: bold; 
-
-} 
-
- 
-
-.timeline-card p { 
-
+/* GENERAL STYLES FOR THE WHOLE PAGE */
+body { 
     margin: 0; 
+    padding: 0; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #e2e8f0; /* Soft silver grey background canvas */
+    color: #000000;            
+}
 
-    font-size: 1rem; 
+h1 {
+    color: #000000;
+}
 
-    color: #4a5568; 
+h2 {
+    color: #4C7A4F;            /* Section titles use your Kawakawa Green */
+    font-size: 1.9rem;
+    margin: 15px;
+    font-weight: 700;
+}
 
-    line-height: 1.6; 
+p {
+    font-size: 1.1rem;
+    line-height: 1.7; 
+    margin: 15px;
+    color: #2d3748;            /* Dark charcoal text for comfortable reading */
+}
 
-} 
+/* TOP BAR MENU AND BUTTON STYLES */
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #000000;      /* Pure black navigation header bar */
+    padding: 5px 40px;
+    border-bottom: 3px solid #C4A55A; /* Gold ribbon indicator under the navbar */
+}
 
- 
+.site-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+}
 
-.info-grid { 
-
-    display: grid; 
-
-    grid-template-columns: 1fr 1fr; 
-
-    gap: 30px; 
-
-    margin: 15px; 
-
-} 
-
- 
-
-.grid-card { 
-
-    background-color: #fbf9f4; /* CHANGED: Clean cream beige backdrop for university path blocks */ 
-
-    border-radius: 20px; 
-
-    overflow: hidden; 
-
-    border: 1px solid #cbd5e1; 
-
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
-
-    transition: border-color 0.3s ease; 
-
-} 
-
- 
-
-.grid-card:hover { 
-
-    border-color: #4C7A4F; /* University path cards highlight green on hover */ 
-
-} 
-
- 
-
-.grid-image { 
-
-    overflow: hidden; 
-
-    width: 100%; 
-
-    height: 220px; 
-
-} 
-
- 
-
-.grid-image img { 
-
-    width: 100%; 
-
-    height: 100%; 
-
-    object-fit: cover; 
-
-    transition: transform 0.4s ease; 
-
-} 
-
- 
-
-.grid-card:hover .grid-image img { 
-
-    transform: scale(1.05); 
-
-} 
-
- 
-
-.grid-content { 
-
-    padding: 25px; 
-
-} 
-
- 
-
-.grid-content h3 { 
-
-    margin: 0 0 10px 0; 
-
-    color: #000000; 
-
-    font-size: 1.6rem; 
-
-    font-weight: bold; 
-
-} 
-
- 
-
-.grid-content p { 
-
+.navbar {
+    list-style-type: none; 
     margin: 0; 
+    padding: 10px 0; 
+    display: flex;         
+    gap: 8px;              
+}
 
-    font-size: 1.05rem; 
-
-    color: #4a5568; 
-
-    line-height: 1.6; 
-
-} 
-
- 
-
-.top-link { 
-
-    color: #4C7A4F; /* Back to top links set to Kawakawa Green */ 
-
-    text-decoration: none; 
-
-    font-size: 1rem; 
-
-    font-weight: 600; 
-
-    margin: 20px 15px; 
-
-    display: inline-block; 
-
-    transition: color 0.2s ease; 
-
-} 
-
- 
-
-.top-link:hover { 
-
-    color: #C4A55A; /* Link turns Gold when hovered */ 
-
-} 
-
- 
-
-/* SALARY DATA TABLE STYLES */ 
-
-.table-section { 
-
-    margin: 60px 15px; 
-
-} 
-
- 
-
-.table-wrapper { 
-
-    overflow-x: auto;  
-
-    border-radius: 16px; 
-
-    border: 1px solid #cbd5e1; 
-
-} 
-
- 
-
-.data-table { 
-
-    width: 100%; 
-
-    border-collapse: collapse;  
-
-    background-color: #fbf9f4; /* CHANGED: Data table body background uses cream beige */ 
-
-    text-align: left; 
-
-    font-size: 1.05rem; 
-
-} 
-
- 
-
-.data-table th { 
-
-    background-color: #000000; /* Table row heading banner set to pure black */ 
-
-    color: #ffffff;             
-
-    padding: 18px 24px; 
-
-    font-weight: 600; 
-
-} 
-
- 
-
-.data-table td { 
-
-    padding: 18px 24px; 
-
-    border-bottom: 1px solid #cbd5e1; 
-
-    color: #2d3748; 
-
-} 
-
- 
-
-.data-table tbody tr:last-child td { 
-
-    border-bottom: none;  
-
-} 
-
- 
-
-.data-table tbody tr:hover td { 
-
-    color: #000000; 
-
-    background-color: rgba(76, 122, 79, 0.03); /* Soft row tracking hover tint */ 
-
-} 
-
- 
-
-/* SITE FOOTER AREA STYLES */ 
-
-.site-footer { 
-
+.navbar li a { 
+    display: block; 
+    color: #cbd5e1; 
     text-align: center; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    font-weight: 600;
+    transition: all 0.2s ease; 
+}
 
-    padding: 30px; 
+/* This triggers when the user hovers their mouse cursor over a menu item */
+.navbar li a:hover { 
+    color: #C4A55A; /* Menu links slide into Gold on hover */
+}
 
-    margin-top: 80px; 
+/* This colors the button for whatever page the user is currently looking at */
+.navbar li a.active {
+    color: #ffffff;
+    background-color: #4C7A4F; /* Current page tag matches your Green hex */
+    border-radius: 8px;
+}
 
-    border-top: 3px solid #C4A55A; /* Gold crown divider line above footer */ 
+/* TWO COLUMN CONTENT ROW STYLES (TEXT + IMAGE SIDE-BY-SIDE) */
+.container {
+    max-width: 1100px; 
+    margin: 0 auto;    
+    padding: 20px;
+    margin-top: 40px;
+}
 
-    background-color: #000000;     /* Solid black layout footer row wrap block */ 
+.content-row {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+    background-color: #fbf9f4; /* Clean cream beige inside content boxes */
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
 
-} 
+.text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
- 
+.image-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+}
 
-.site-footer p { 
+.image-block img {
+    width: 100%;
+    max-width: 350px;
+    height: 240px;       
+    object-fit: cover;   
+    border-radius: 20px; 
+    transition: transform 0.4s ease; 
+}
 
-    font-size: 0.95rem; 
+.image-block:hover img {
+    transform: scale(1.05); 
+}
 
-    color: #ffffff; 
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 15px 15px 5px 15px;
+    line-height: 1.1;
+}
 
-    margin: 0; 
+.hero-subtitle {
+    color: #4a5568;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin: 5px 15px 15px 15px;
+}
 
-} 
+/* SCHOOLING PATHWAY TIMELINE AND GRID STYLES */
+.badge {
+    display: inline-block;
+    background-color: rgba(76, 122, 79, 0.1); /* Subtle green tint glow capsule */
+    color: #4C7A4F;                           /* Green badge typography text */
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: 1px solid rgba(76, 122, 79, 0.2);
+    margin-left: 15px;
+}
+
+.section-divider-title {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+    margin: 60px 15px 25px 15px;
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 15px;
+}
+
+.timeline-card {
+    background-color: #fbf9f4; /* Clean cream beige background for timeline cards */
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px); 
+    border-color: #4C7A4F; /* Cards light up green on mouse focus hover */
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.step-number {
+    align-self: flex-start;
+    background-color: #4C7A4F; /* Year tag boxes filled with Kawakawa Green */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.step-title {
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.timeline-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* INFO GRID ARCHITECTURE */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 15px;
+}
+
+.grid-card {
+    background-color: #fbf9f4; /* Clean cream beige backdrop for university path blocks */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+.grid-card:hover {
+    border-color: #4C7A4F; /* University path cards highlight green on hover */
+}
+
+.grid-image {
+    overflow: hidden;
+    width: 100%;
+    height: 220px;
+}
+
+.grid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.grid-card:hover .grid-image img {
+    transform: scale(1.05);
+}
+
+.grid-content {
+    padding: 25px;
+}
+
+.grid-content h3 {
+    margin: 0 0 10px 0;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.grid-content p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.top-link {
+    color: #4C7A4F; /* Back to top links set to Kawakawa Green */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 20px 15px;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.top-link:hover {
+    color: #C4A55A; /* Link turns Gold when hovered */
+}
+
+/* SALARY DATA TABLE STYLES */
+.table-section {
+    margin: 60px 15px;
+}
+
+.table-wrapper {
+    overflow-x: auto; 
+    border-radius: 16px;
+    border: 1px solid #cbd5e1;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse; 
+    background-color: #fbf9f4; /* Data table body background uses cream beige */
+    text-align: left;
+    font-size: 1.05rem;
+}
+
+.data-table th {
+    background-color: #000000; /* Table row heading banner set to pure black */
+    color: #ffffff;            
+    padding: 18px 24px;
+    font-weight: 600;
+}
+
+.data-table td {
+    padding: 18px 24px;
+    border-bottom: 1px solid #cbd5e1;
+    color: #2d3748;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none; 
+}
+
+.data-table tbody tr:hover td {
+    color: #000000;
+    background-color: rgba(76, 122, 79, 0.03); /* Soft row tracking hover tint */
+}
+
+/* SITE FOOTER AREA STYLES */
+.site-footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+    border-top: 3px solid #C4A55A; /* Gold crown divider line above footer */
+    background-color: #000000;     /* Solid black layout footer row wrap block */
+}
+
+.site-footer p {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin: 0;
+}
